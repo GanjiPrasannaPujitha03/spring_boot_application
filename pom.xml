@@ -13,7 +13,7 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>simple-hello</artifactId>
+    <artifactId>simple-hello-Pujitha-error</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -32,6 +32,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
             </plugin>
         </plugins>
     </build>
