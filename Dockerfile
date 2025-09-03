@@ -1,17 +1,14 @@
-# Use Java 17 slim image
-FROM openjdk:17-jdk-slim
+# Use a lightweight OpenJDK image
+FROM eclipse-temurin:17-jdk-alpine
 
-# Maintainer info
-LABEL maintainer="prasannapujitha03@gmail.com"
-
-# Set working directory
+# Set working directory inside the container
 WORKDIR /app
 
-# Copy the built jar into the container
-COPY target/hello-pujitha.jar
+# Copy the built jar from target into the container and rename to app.jar
+COPY target/simple-hello-Pujitha-error-1.0.0.jar app.jar
 
-# Expose port 8080
+# Expose the default Spring Boot port
 EXPOSE 8080
 
-# Run the jar file
-ENTRYPOINT ["java", "-jar", "hello-pujitha.jar"]
+# Run the Spring Boot app
+ENTRYPOINT ["java", "-jar", "app.jar"]
