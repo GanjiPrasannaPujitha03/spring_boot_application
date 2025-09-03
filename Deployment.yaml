@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: hello-pujitha
-        image: ganjiprasannapujitha03/hello-pujitha:latest
+        image: ganjiprasannapujitha03/hello-pujitha:13
         ports:
         - containerPort: 8080
