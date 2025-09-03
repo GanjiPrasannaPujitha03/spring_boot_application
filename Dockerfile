@@ -8,7 +8,7 @@ LABEL maintainer="prasannapujitha03@gmail.com"
 WORKDIR /app
 
 # Copy the built jar into the container
-COPY target/simple-hello-Pujitha-1.0.0.jar hello-pujitha.jar
+COPY target/hello-pujitha.jar
 
 # Expose port 8080
 EXPOSE 8080
