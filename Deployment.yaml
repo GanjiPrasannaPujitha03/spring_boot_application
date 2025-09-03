@@ -1,23 +1,20 @@
-piVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-app
+  name: hello-pujitha
   namespace: pujitha-namespace
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: springboot-app
+      app: hello-pujitha
   template:
     metadata:
       labels:
-        app: springboot-app
+        app: hello-pujitha
     spec:
       containers:
-      - name: springboot-container
-        image: GanjiPrasannaPujitha03/hello-pujitha:latest # Replace with your image
+      - name: hello-pujitha
+        image: ganjiprasannapujitha03/hello-pujitha:latest
         ports:
-        - containerPort: 8080         # Spring Boot default port
-        env:
-        - name: SPRING_PROFILES_ACTIVE
-          value: "prod"
+        - containerPort: 8080
